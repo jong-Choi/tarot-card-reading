@@ -1,6 +1,7 @@
 import { useRecoilState } from "recoil";
 import todoAtom from "../../recoil/todo/atom";
 import { Todo } from "../../types/todo";
+import TitleInput from "../../components/todo/TitleInput";
 
 const TodoPage = () => {
   const [todoList, setTodoList] = useRecoilState(todoAtom);
@@ -21,7 +22,7 @@ const TodoPage = () => {
           <div key={todo.id} style={{ display: "flex" }}>
             <div>{todo.id}</div>
             <div>{todo.isDone}</div>
-            <div>{todo.title}</div>
+            <TitleInput id={todo.id} />
           </div>
         );
       })}
