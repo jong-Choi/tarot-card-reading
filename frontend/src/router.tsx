@@ -5,6 +5,7 @@ import About from "./pages/About";
 import Profile from "./pages/Profile";
 import Profiles from "./pages/Profiles";
 import NotFound from "./pages/NotFound";
+import TodoPage from "./pages/Todo";
 
 export const router = createBrowserRouter([
   {
@@ -27,6 +28,10 @@ export const router = createBrowserRouter([
             element: <Profiles />,
           },
         ],
+      },
+      {
+        path: "/todo",
+        element: <TodoPage />,
       },
     ],
   },
